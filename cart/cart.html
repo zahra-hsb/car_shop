@@ -1,0 +1,516 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>cart</title>
+</head>
+<body>
+
+    
+        <div class="btn-buy-sell">
+            <a href="#" onclick="tab2Control()" class="sell-to-others">sell</a>
+            <a href="#" onclick="tabControl()" class="buy-from-other">Buy</a> <!-- add msg btn  -->
+
+        </div>
+
+    
+
+
+
+    <!-- start of tab2 -->
+    <div class="tab2">
+        <section class="basket-items" id="basket">
+            <div class="item-title"><h3>Your Basket2</h3></div>
+            <table>
+                <thead>
+                    
+                        <th>#</th>
+                        <th><h4>Image</h4></th>
+                        <th><h4>Title</h4></th>
+                        <th><h4>Price</h4></th>
+                        <th><h4>Qty</h4></th>
+                        <th><h4>Total price</h4></th>
+                        <th><h4>Buy</h4></th>
+                        <th><h4>Edit</h4></th>
+                        <th><h4>Delete</h4></th>
+                    
+                </thead>
+                <tbody>
+                    <tr class="item">
+                        <td>1</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro1</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>2</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro2</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>3</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro3</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>4</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro4</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>5</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro4</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="more-item3">
+                        <td>6</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro4</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn buy"><i class="fa fa-basket"></i><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <span class="expand-btn" onclick="expndItem3()">expand</span>
+            <a href="" class="buy-all">buy all</a>
+
+        </section>
+        <section class="purchased-orders" id="purchased">
+            <div class="item-title"><h3>Purchased orders</h3></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><h4>Image</h4></th>
+                        <th><h4>Title</h4></th>
+                        <th><h4>Price</h4></th>
+                        <th><h4>Qty</h4></th>
+                        <th><h4>Total price</h4></th>
+                        <th><h4>Status</h4></th>
+                        <th><h4>Edit</h4></th>
+                        <th><h4>Cancel</h4></th>
+                        <th><h4>Delivered</h4></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="item">
+                        <td>1</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro1</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>2</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro2</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>3</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro3</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>4</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro4</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>5</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro5</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>1</p></td>
+                        <td><p>50$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="more-item4">
+                        <td>6</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro5</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>1</p></td>
+                        <td><p>50$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                </tbody>
+            </table>
+           
+    
+                <span class="expand-btn" onclick="expndItem4()">expand</span>
+        </section>
+    </div>
+
+    <!-- end of tab2 -->
+    <!-- start of tab1 -->
+    <div class="tab1">
+        <section class="basket-items" id="basket">
+            
+                
+                <div class="item-title"><h3>Your Basket1</h3> </div>
+            <div>
+            </div>
+            <table>
+                <thead>
+                    
+                        <th>#</th>
+                        <th><h5>Image</h5></th>
+                        <th><h5>Title</h5></th>
+                        <th><h5>Price</h5></th>
+                        <th><h5>Qty</h5></th>
+                        <th><h5>Total price</h5></th>
+                        <th><h5>Buy</h5></th>
+                        <th><h5>Edit</h5></th>
+                        <th><h5>Delete</h5></th>
+                    
+                </thead>
+                <tbody>
+                    <tr class="item">
+                        <td>1</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro1</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>2</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro2</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>3</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro3</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>4</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro4</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>5</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro5</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="more-item">
+                        <td>6</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro6</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                    <tr class="more-item">
+                        <td>7</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro7</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn buy"><i class="uil uil-shopping-cart-alt"></i></a></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>
+                        <td><a href="#" class="btn delete"><i class="uil uil-trash-alt"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <span class="expand-btn" onclick="expndItem()">expand</span>
+            <a href="" class="buy-all">buy all</a>
+        </section>
+        <section class="purchased-orders" id="purchased">
+            <div class="item-title"><h3>Purchased orders</h3></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><h4>Image</h4></th>
+                        <th><h4>Title</h4></th>
+                        <th><h4>Price</h4></th>
+                        <th><h4>Qty</h4></th>
+                        <th><h4>Total price</h4></th>
+                        <th><h4>Status</h4></th>
+                        <th><h4>Edit</h4></th>
+                        <th><h4>Cancel</h4></th>
+                        <th><h4>Delivered</h4></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="item">
+                        <td>1</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro1</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>    
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>2</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro2</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>    
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>3</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro3</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>    
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>4</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro4</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>    
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="item">
+                        <td>5</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro5</p></td>
+                        <td><p>20$</p></td>
+                        <td><p>2</p></td>
+                        <td><p>40$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>    
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="more-item2">
+                        <td>6</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro6</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>    
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                    </tr>
+                    <tr class="more-item2">
+                        <td>7</td>
+                        <td><img src="" alt="pro-img"></td>
+                        <td><p>pro7</p></td>
+                        <td><p>50$</p></td>
+                        <td><p>3</p></td>
+                        <td><p>150$</p></td>
+                        <td><a href="#" class="btn pending">Pending</a>
+                            <!-- <a href="#" class="btn accept">Accept</a>
+                            <a href="#" class="btn reject">Reject</a>
+                            <a href="#" class="btn delivered">Delivered</a>
+                            <a href="#" class="btn avai">not available</a>
+                            <a href="#" class="btn cancel">cancel</a>--></td>
+                        <td><a href="#" class="btn edit"><i class="uil uil-edit"></i></a></td>    
+                        <td><a href="#" class="btn cancel"><i class="uil uil-times-circle"></i></a></td>
+                        <td><a href="#" class="btn delivered">Delivered</a></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+    
+                <span class="expand-btn" onclick="expndItem2()">expand</span>
+                
+        </section>
+    </div>
+
+    <!-- end of tab1 -->
+
+    <div class="history">
+         <a href="" class="btn">history of your orders</a>
+
+    </div>
+    <div class="backdrop"></div>
+    <div class="modal">
+        <h3>Edit Qty</h3>
+        <div>
+            <input type="number" name="" id="">
+            <a href="#" class="btn edit-qty"><i class="uil uil-edit"></i></a>
+            <a href="#" class="btn cancel-modal"><i class="uil uil-times-circle"></i></a>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
