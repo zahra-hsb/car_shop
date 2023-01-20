@@ -209,7 +209,7 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: linear-gradient(-13deg, #ffffff 30%, #274d5a 20%);
+    background-image: linear-gradient(-13deg, #000000 30%, #0091FF 20%);
     position: relative;
     overflow-x: hidden; 
 }
@@ -221,7 +221,7 @@ button {
 
 .header_section::after {
     content: '';
-    background-color: #ffffff;
+    background-color: #000;
     position: absolute;
     width: 420px;
     right: initial;
@@ -247,7 +247,7 @@ button {
 }
 
 .logo {
-    width: 35%;
+    width: 20%;
     float: left;
 }
 
@@ -348,8 +348,8 @@ button {
     width: 90px;
     margin: 0 auto;
     text-align: center;
-    background-color: #f7c17b;
-    color: #325662;
+    background-color: #e10087;
+    color: #f5f7f8;
     font-size: 20px;
     font-weight: bold;
     border-radius: 100px;
@@ -394,7 +394,7 @@ button {
     font-size: 18px;
     color: #ffffff;
     text-align: center;
-    background-color: #f7c17b;
+    background-color: #e10087;
     padding: 8px 0px;
 }
 
@@ -407,7 +407,7 @@ button {
 #main_slider a.carousel-control-prev {
     left: 88%;
     top: 60%;
-    background-color: #f7c17b;
+    background-color: #e10087;
     color: #ffffff;
 }
 
@@ -431,7 +431,7 @@ button {
 #main_slider .carousel-control-next:hover,
 #main_slider .carousel-control-prev:focus,
 #main_slider .carousel-control-next:focus {
-    background-color: #f7c17b;
+    background-color: #e10087;
     color: #ffffff;
 }
 /* banner section end */
@@ -492,7 +492,7 @@ button {
 }
 .box_main:after{
     content: '';
-    background-color: #f7c17b;
+    background-color: #e10087;
     position: absolute;
     width: 420px;
     right: 0px;
@@ -555,7 +555,7 @@ clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
 }
 .buy_bt a:hover{
     color: #ffffff;
-    background-color: #f7c17b;
+    background-color: #e10087;
 }
 
 .price_text {
@@ -579,7 +579,7 @@ clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
 }
 .box_main_3:after {
     content: '';
-    background-color: #f7c17b;
+    background-color: #e10087;
     position: absolute;
     width: 420px;
     right: 0px;
@@ -620,7 +620,7 @@ clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
     float: left;
     font-size: 18px;
     color: #ffffff;
-    background-color: #f7c17b;
+    background-color: #e10087;
     padding: 8px 5px;
     text-align: center;
 }
@@ -730,7 +730,7 @@ box-shadow: 0px 8px 7px 3px
     float: left;
     font-size: 18px;
     color: #ffffff;
-    background-color: #f7c17b;
+    background-color: #e10087;
     padding: 8px 5px;
     text-align: center;
     margin-top: 80px;
@@ -815,7 +815,7 @@ box-shadow: 0px 8px 7px 3px
 #my_slider a.carousel-control-prev {
     left: 640px;
     top: 93%;
-    background-color: #f7c17b;
+    background-color: #e10087;
     color: #ffffff;
 }
 
@@ -839,7 +839,7 @@ box-shadow: 0px 8px 7px 3px
 #my_slider .carousel-control-next:hover,
 #my_slider .carousel-control-prev:focus,
 #my_slider .carousel-control-next:focus {
-    background-color: #f7c17b;
+    background-color: #e10087;
     color: #ffffff;
 }
 
@@ -1008,7 +1008,7 @@ textarea#comment::placeholder {
     color: #ffffff;
     font-size: 18px;
     padding: 10px 0px;
-    background-color: #f7c17b;
+    background-color: #e10087;
     border-radius: 10px;
 }
 
@@ -1060,7 +1060,7 @@ textarea#comment::placeholder {
     font-size: 16px;
     color: #ffffff;
     text-align: center;
-    background-color: #f7c17b;
+    background-color: #e10087;
     padding: 8px;
     margin-top: 20px;
 }
@@ -1076,7 +1076,7 @@ textarea#comment::placeholder {
     color: #dfdfdf;
 }
 .call_text a:hover{
-    color: #f7c17b;
+    color: #e10087;
 }
 .padding_left_0{
     padding-left: 15px;
@@ -1121,7 +1121,7 @@ textarea#comment::placeholder {
 }
 
 .copyright_text a:hover {
-    color: #f7c17b;
+    color: #e10087;
 }
 
 .margin_top_90 {
