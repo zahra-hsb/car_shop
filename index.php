@@ -76,12 +76,19 @@ require_once 'inc/connection.php';
          <div class="banner_section layout_padding">
             <div id="main_slider" class="carousel slide" data-ride="carousel">
                <div class="carousel-inner">
+                 
                   <div class="carousel-item active">
                      <div class="container">
                         <div class="row">
                            <div class="col-md-7">
                               <div class="best_text">Best</div>
-                              <div class="image_1"><img src="images/images.jpeg"></div>
+                              <?php 
+                     $cat_query = mysqli_query($connection, "SELECT * FROM category");
+                     while($cat_array = mysqli_fetch_array($cat_query)):
+                     ?>
+                              <div class="cat-paragraph"><a href="#"><?php echo $cat_array['cat_name']; ?></a></div>
+                  <?php endwhile; ?>
+
                            </div>
                            <div class="col-md-5">
                               <h1 class="banner_taital">انواع قطعات خودرو</h1>
@@ -96,7 +103,12 @@ require_once 'inc/connection.php';
                         <div class="row">
                            <div class="col-md-7">
                               <div class="best_text">Best</div>
-                              <div class="image_1"><img src="images/img-1.png"></div>
+                              <div class="cat-paragraph">  <?php 
+                     $cat_query = mysqli_query($connection, "SELECT * FROM category");
+                     while($cat_array = mysqli_fetch_array($cat_query)):
+                     ?>
+                              <div class="cat-paragraph"><a href="#"><?php echo $cat_array['cat_name']; ?></a></div>
+                  <?php endwhile; ?></div>
                            </div>
                            <div class="col-md-5">
                               <h1 class="banner_taital">اکسسوری های خودرو</h1>
