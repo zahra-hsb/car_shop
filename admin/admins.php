@@ -11,10 +11,10 @@
   </div>
   <div class="card-body">
     <form class="" action="actions.php?admins" method="post">
-      <input type="password" name="password" value="" placeholder="گذرواژه" class="form-control" style=" margin-left: 20%">
+      <input type="password" name="password" value="" placeholder="گذرواژه" class="form-control" style=" margin-left: 24.5%">
       <input type="text" name="username" value="" placeholder="نام کاربری" class="form-control" style=" position: absolute; top: 69px;">
-      <input type="email" name="email" value="" placeholder="ایمیل" class="form-control" style=" position: absolute; top: 69px; left: 40%">
-      <input type="submit" name="" class="btn btn-danger" value="افزودن" style="position: absolute; top: 69px; left: 60%">
+      <input type="email" name="email" value="" placeholder="ایمیل" class="form-control" style=" position: absolute; top: 69px; left: 49%">
+      <input type="submit" name="" class="btn btn-danger" value="افزودن" style="position: absolute; top: 69px; left: 80%">
     </form>
   </div>
 </div>
