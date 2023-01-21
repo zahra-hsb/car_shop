@@ -23,14 +23,14 @@
        <input type="checkbox" name="" id="chk" aria-hidden="true">
 
        <div class="signup">
-           <form action="admin/dashboard.html">
+           <form action="admin/index.php">
                <label class="signup-label" for="chk" aria-hidden="true">Sign up</label>
                <input class="input" type="text" name="txt" placeholder="Username" required="">
                <input class="input" type="email" name="email" placeholder="Email" required="">
                <input class="input" type="password" name="pswd" placeholder="Password" required="">
                <div>
                 <button class="login-btn" onclick="">Sign up</button>
-               <button class="login-btn" onclick="location.href='index.html'" >Back</button>
+               <button class="login-btn" onclick="location.href='admin/index.php'" >Back</button>
                </div>
                
 
@@ -38,13 +38,13 @@
        </div>
        
        <div class="login">
-           <form action="admin/dashboard.html">
+           <form action="admin/index.php">
                <label class="login-label" for="chk" aria-hidden="true">Login</label>
-               <input class="input" type="email" name="email" placeholder="Email" required="">
+               <input class="input" type="text" name="email" placeholder="Email" required="">
                <input class="input" type="password" name="pswd" placeholder="Password" required="">
                <div>
                     <button class="login-btn">Login</button>
-                    <button class="login-btn">Back</button>
+                    <button class="login-btn" onclick="location.href='admin/index.php'">Back</button>
                </div>
               
 
