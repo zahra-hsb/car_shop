@@ -344,6 +344,7 @@ button {
     position: relative;
     z-index: 1;
     padding-top: 30px;
+    height: 700px;
 }
 
 .best_text {
