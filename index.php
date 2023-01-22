@@ -60,7 +60,7 @@ require_once 'inc/connection.php';
                <form class="form-inline my-2 my-lg-0">
                   <div class="login_menu">
                      <ul>
-                        <li><a href="login.html">ورود</a></li>
+                        <li><a href="login.php">ورود</a></li>
                         <li><a href="cart/cart.html"><img src="images/trolly-icon.png"></a></li>
                         <li><a href="#"><img src="images/search-icon.png"></a></li>
                      </ul>
@@ -138,58 +138,28 @@ require_once 'inc/connection.php';
             <p class="cycle_text">برای خرید محصولات ابتدا وارد شوید</p>
             <div class="buy_bt login"><a href="login.html">ورود</a></div>
             <div class="cycle_section_2 layout_padding">
+               <?php 
+                  $product_query = mysqli_query($connection, "SELECT * FROM products");
+                  while($proArray = mysqli_fetch_array($product_query)):
+
+?>
                <div class="row">
                   <div class="col-md-6">
                      <div class="box_main">
-                        <h6 class="number_text">01</h6>
-                        <div class="image_2"><img src="images/img-2.png"></div>
+                        <h6 class="number_text"><?php echo $proArray['id']; ?></h6>
+                        <div class="image_2"><img src="images/<?php echo $proArray['image']; ?>"></div>
                      </div>
                   </div>
                   <div class="col-md-6">
-                     <h1 class="cycles_text">Cycles</h1>
-                     <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                     <h1 class="cycles_text"><?php echo $proArray['title']; ?></h1>
+                     <p class="lorem_text"><?php echo $proArray['description']; ?></p>
                      <div class="btn_main">
                         <div class="buy_bt"><a href="cart/cart.html">خرید</a></div>
-                        <h4 class="price_text">قیمت <span style=" color: #e10087">T</span> <span style=" color: #325662">200</span></h4>
+                        <h4 class="price_text">قیمت <span style=" color: #e10087">T</span> <span style=" color: #325662"><?php echo $proArray['price']; ?></span></h4>
                      </div>
                   </div>
-               </div>
-            </div>
-            <div class="cycle_section_3 layout_padding">
-               <div class="row">
-                  <div class="col-md-6">
-                     <h1 class="cycles_text">Stylis Cycle</h1>
-                     <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                     <div class="btn_main">
-                        <div class="buy_bt"><a href="cart/cart.html">خرید</a></div>
-                        <h4 class="price_text">قیمت<span style=" color: #e10087">T</span> <span style=" color: #325662">200</span></h4>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="box_main_3">
-                        <h6 class="number_text_2">02</h6>
-                        <div class="image_2"><img src="images/img-3.png"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="cycle_section_2 layout_padding">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="box_main_3">
-                        <h6 class="number_text_2">03</h6>
-                        <div class="image_2"><img src="images/img-4.png"></div>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <h1 class="cycles_text">Modern <br>Cycle</h1>
-                     <p class="lorem_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                     <div class="btn_main">
-                        <div class="buy_bt"><a href="cart/cart.html">خرید</a></div>
-                        <h4 class="price_text">قیمت <span style=" color: #e10087">T</span> <span style=" color: #325662">200</span></h4>
-                     </div>
-                  </div>
-               </div>
+               </div><br/>
+               <?php endwhile; ?>
             </div>
             <div class="read_btn_main">
                <div class="read_bt"><a href="shop.html">فروشگاه</a></div>
