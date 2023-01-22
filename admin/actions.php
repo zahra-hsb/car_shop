@@ -27,7 +27,7 @@ if(isset($_GET['delete_product'])){
 }elseif (isset($_GET['add-new-product']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
   $title = $_POST['title'];
   $image = $_FILES['image']['name'];
-  $upload = '../uploads/'. basename($image);
+  $upload = '../images/'. basename($image);
   $desc = $_POST['desc'];
   $cat = $_POST['cat'];
   $price = $_POST['price'];
@@ -48,7 +48,7 @@ if(isset($_GET['delete_product'])){
   $id = $_GET['edit-product'];
   $title = $_POST['title'];
   $image = $_FILES['image']['name'];
-  $upload = '../uploads/'.basename($image);
+  $upload = '../images/'.basename($image);
   $desc = $_POST['desc'];
   $cat = $_POST['cat'];
   $price = $_POST['price'];
