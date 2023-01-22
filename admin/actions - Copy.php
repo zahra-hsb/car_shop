@@ -1,5 +1,5 @@
 <?php
-require_once '../inc/config.php';
+require_once '../inc/connection.php';
 
 if(isset($_GET['delete_product'])){
   $id = $_GET['delete_product'];
