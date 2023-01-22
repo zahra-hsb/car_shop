@@ -222,7 +222,7 @@ require_once 'inc/connection.php';
          <div class="container">
             <div class="contact_main">
                <h1 class="request_text">تماس با ما</h1>
-               <form action="/action_page.php">
+               <form action="admin/actions.php" method="POST">
                   <div class="form-group">
                      <input type="text" class="email-bt" placeholder="نام" name="name">
                   </div>
@@ -233,7 +233,7 @@ require_once 'inc/connection.php';
                      <textarea class="massage-bt" placeholder="متن پیام" rows="5" id="comment" name="comment"></textarea>
                   </div>
                </form>
-               <div class="send_btn"><a href="#">ارسال</a></div>
+               <div class="send_btn"><a href="index.php?add-comment">ارسال</a></div>
             </div>
          </div>
       </div>

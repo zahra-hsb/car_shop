@@ -66,6 +66,13 @@ if(isset($_GET['delete_product'])){
   $email = $_POST['email'];
   $query3 = mysqli_query($connection , "INSERT INTO admins(username,password,email) VALUES('$user','$pass','$email') ");
   header('Location: index.php?admins');
+} elseif ((isset($_GET['add-comment'])) && !empty($_SERVER['REQUEST_METHOD'] == 'POST')) {
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $comment = $_POST['comment'];
+  $commentquery = mysqli_query($connection , "INSERT INTO comments(name,email,comment) VALUES('$name','$email','$comment') ");
+  // header('Location: ../index.php');
+
 }
 
 
