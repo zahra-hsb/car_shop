@@ -78,13 +78,13 @@
                   $product_query = mysqli_query($connection , $query= "SELECT * FROM products" );
                   while($product_row = mysqli_fetch_array($product_query)):
                     $id = $product_row['cat_id'];
-                    $cat_query = mysqli_query($connection , $query1 = "SELECT * FROM category WHERE cat_id = '$id'" );
+                    $cat_query = mysqli_query($connection , $query1 = "SELECT * FROM category WHERE id = '$id'" );
                     $cat_row = mysqli_fetch_array($cat_query);
 
                 ?>
               <tr>
                   <td><?php  echo $num++; ?></td>
-                  <td><img src="../uploads/<?php echo $product_row['image']; ?>" width="100px" height="70px"></td>
+                  <td><img src="../images/<?php echo $product_row['image']; ?>" width="100px" height="70px"></td>
                   <td><?php echo $product_row['title']; ?></td>
                   <td><?php echo $product_row['count']; ?></td>
                   <td><?php echo $cat_row['cat_name']; ?></td>
