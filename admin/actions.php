@@ -50,7 +50,7 @@ if(isset($_GET['delete_product'])){
   $image = $_FILES['image']['name'];
   $upload = '../uploads/'.basename($image);
   $desc = $_POST['desc'];
-  $cat = $_POST['cat_name'];
+  $cat = $_POST['cat'];
   $price = $_POST['price'];
   $count = $_POST['count'];
   $query = mysqli_query($connection , "UPDATE products SET title='$title' , image='$image', description='$desc', cat_name='$cat', price='$price' , count='$count' WHERE id = '$id'");
