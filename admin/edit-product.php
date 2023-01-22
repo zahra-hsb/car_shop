@@ -34,6 +34,7 @@ $productrow = mysqli_fetch_array($getproduct);
                 <input type="submit" class="btn btn-primary btn-lg" value="ویرایش">
             </div>
             <div class="form-group">
+                <input type="hidden" name="cat_id" value="<?php echo $productrow['cat_id']; ?>">
                 <select name="cat" class="form-control">
                   <?php
                   $query = mysqli_query($connection , $query="SELECT * FROM category");
