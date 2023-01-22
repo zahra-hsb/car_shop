@@ -31,8 +31,8 @@ if(isset($_GET['delete_product'])){
   $desc = $_POST['desc'];
   $cat = $_POST['cat'];
   $price = $_POST['price'];
-
-  $query = mysqli_query($connection , "INSERT INTO products(title,image,description,cat_id,price) VALUES('$title','$image','$desc','$cat','$price')");
+  $count = $_POST['count'];
+  $query = mysqli_query($connection , "INSERT INTO products(title,image,description,cat_id,price,count) VALUES('$title','$image','$desc','$cat','$price','$count)");
 
   if($query){
     move_uploaded_file($_FILES['image']['tmp_name'] , $upload);
