@@ -30,7 +30,7 @@
                   <?php
                   $query = mysqli_query($connection , $query="SELECT * FROM category");
                    while($row = mysqli_fetch_array($query)): ?>
-                    <option value="<?php echo $row['cat_id'];  ?>"><?php echo $row['cat_name']; ?></option>
+                    <option value="<?php echo $row['id'];  ?>"><?php echo $row['cat_name']; ?></option>
                   <?php endwhile; ?>
                 </select>
             </div>
