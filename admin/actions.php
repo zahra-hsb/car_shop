@@ -11,7 +11,7 @@ if(isset($_GET['delete_product'])){
   header($string= 'Location: index.php?admins');
 }elseif(isset($_GET['delete_cat'])){
   $id = $_GET['delete_cat'];
-  $query = mysqli_query($connection , $query= "DELETE FROM category WHERE cat_id='$id'");
+  $query = mysqli_query($connection , $query= "DELETE FROM category WHERE id='$id'");
   header($string= 'Location: index.php?cats');
 
 }elseif(isset($_GET['delete_comment'])){
