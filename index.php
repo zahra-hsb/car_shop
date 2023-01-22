@@ -38,30 +38,30 @@ require_once 'inc/connection.php';
       <!-- header section start -->
       <div class="header_section header_bg">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a href="index.html" class="logo"><img src="images/logo.png"></a>
+            <a href="index.php" class="logo"><img src="images/logo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav mr-auto" style="margin-left: 20%;">
                   <li class="nav-item active">
-                     <a class="nav-link" href="index.html">صفحه اصلی</a>
+                     <a class="nav-link" href="index.php">صفحه اصلی</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="shop.html">فروشگاه</a>
+                     <a class="nav-link" href="shop.php">فروشگاه</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="about.html">درباره ما</a>
+                     <a class="nav-link" href="about.php">درباره ما</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">ارتباط با ما</a>
+                     <a class="nav-link" href="contact.php">ارتباط با ما</a>
                   </li>
                </ul>
                <form class="form-inline my-2 my-lg-0">
                   <div class="login_menu">
                      <ul>
                         <li><a href="login.php">ورود</a></li>
-                        <li><a href="cart/cart.html"><img src="images/trolly-icon.png"></a></li>
+                        <li><a href="cart/cart.php"><img src="images/trolly-icon.png"></a></li>
                         <li><a href="#"><img src="images/search-icon.png"></a></li>
                      </ul>
                   </div>
@@ -93,7 +93,7 @@ require_once 'inc/connection.php';
                            <div class="col-md-5">
                               <h1 class="banner_taital">انواع قطعات خودرو</h1>
                               <p class="banner_text">با مناسب ترین قیمت و کیفیت</p>
-                              <div class="contact_bt"><a href="shop.html">خرید</a></div>
+                              <div class="contact_bt"><a href="shop.php">خرید</a></div>
                            </div>
                         </div>
                      </div>
@@ -113,7 +113,7 @@ require_once 'inc/connection.php';
                            <div class="col-md-5">
                               <h1 class="banner_taital">اکسسوری های خودرو</h1>
                               <p class="banner_text">عرضه اکسسوری ها در طرح های مختلف</p>
-                              <div class="contact_bt"><a href="shop.html">خرید</a></div>
+                              <div class="contact_bt"><a href="shop.php">خرید</a></div>
                            </div>
                         </div>
                      </div>
@@ -136,7 +136,7 @@ require_once 'inc/connection.php';
          <div class="container">
             <h1 class="cycle_taital">محصولات ما</h1>
             <p class="cycle_text">برای خرید محصولات ابتدا وارد شوید</p>
-            <div class="buy_bt login"><a href="login.html">ورود</a></div>
+            <div class="buy_bt login"><a href="login.php">ورود</a></div>
             <div class="cycle_section_2 layout_padding">
                <?php 
                   $product_query = mysqli_query($connection, "SELECT * FROM products");
@@ -154,15 +154,15 @@ require_once 'inc/connection.php';
                      <h1 class="cycles_text"><?php echo $proArray['title']; ?></h1>
                      <p class="lorem_text"><?php echo $proArray['description']; ?></p>
                      <div class="btn_main">
-                        <div class="buy_bt"><a href="cart/cart.html">خرید</a></div>
-                        <h4 class="price_text">قیمت <span style=" color: #e10087">T</span> <span style=" color: #325662"><?php echo $proArray['price']; ?></span></h4>
+                        <div class="buy_bt"><a href="cart/cart.php">خرید</a></div>
+                        <h4 class="price_text">قیمت <span style=" color: #e10087">T</span> <span style=" color: #325662"><?php echo $proArray['id']; ?></span></h4>
                      </div>
                   </div>
                </div><br/>
                <?php endwhile; ?>
             </div>
             <div class="read_btn_main">
-               <div class="read_bt"><a href="shop.html">فروشگاه</a></div>
+               <div class="read_bt"><a href="shop.php">فروشگاه</a></div>
             </div>
          </div>
       </div>
@@ -175,7 +175,7 @@ require_once 'inc/connection.php';
             <div class="about_main">
                <img src="images/img-5.png" class="image_5">
             </div>
-            <div class="read_bt_1"><a href="about.html">درباره ما</a></div>
+            <div class="read_bt_1"><a href="about.php">درباره ما</a></div>
          </div>
       </div>
       <!-- about section end -->
@@ -183,57 +183,29 @@ require_once 'inc/connection.php';
       <div class="client_section layout_padding">
          <div id="my_slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
+               <?php 
+                  $comment_query = mysqli_query($connection, "SELECT * FROM comments");
+                  while($cmrow = mysqli_fetch_array($comment_query)):
+               ?>
                <div class="carousel-item active">
                   <div class="container">
                      <div class="client_main">
                         <h1 class="client_taital">نظرات مشتریان</h1>
                         <div class="client_section_2">
-                           <div class="client_left">
-                              <div><img src="images/client-img.png" class="client_img"></div>
-                           </div>
+                           <!-- <div class="client_left"> -->
+                              <!-- <div><img src="images/client-img.png" class="client_img"></div> -->
+                           <!-- </div> -->
                            <div class="client_right">
                               <div class="quote_icon"><img src="images/quote-icon.png"></div>
-                              <p class="client_text">من از اکسسوری های این فروشگاه خرید کردم و راضی بودم</p>
-                              <h3 class="client_name">mohsen</h3>
+                              <p class="client_text"><?php echo $cmrow['comment']; ?></p>
+                              <h3 class="client_name"><?php echo $cmrow['name']; ?></h3>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="client_main">
-                        <h1 class="client_taital">نظرات مشتریان</h1>
-                        <div class="client_section_2">
-                           <div class="client_left">
-                              <div><img src="images/client-img.png" class="client_img"></div>
-                           </div>
-                           <div class="client_right">
-                              <div class="quote_icon"><img src="images/quote-icon.png"></div>
-                              <p class="client_text">این فروشگاه محصولاتش بی نظیره از دست ندین</p>
-                              <h3 class="client_name">ali</h3>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="client_main">
-                        <h1 class="client_taital">نظرات مشتریان</h1>
-                        <div class="client_section_2">
-                           <div class="client_left">
-                              <div><img src="images/client-img.png" class="client_img"></div>
-                           </div>
-                           <div class="client_right">
-                              <div class="quote_icon"><img src="images/quote-icon.png"></div>
-                              <p class="client_text">من که خیلی از این فروشگاه و محصولاتش راضی ام . امیدوارم شما هم استفاده کنید و با خیال راحت خرید کنید.</p>
-                              <h3 class="client_name">zahra</h3>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                 <?php endwhile; ?>
+                  
             </div>
             <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
                <i class="fa fa-angle-left"></i>
@@ -252,16 +224,13 @@ require_once 'inc/connection.php';
                <h1 class="request_text">تماس با ما</h1>
                <form action="/action_page.php">
                   <div class="form-group">
-                     <input type="text" class="email-bt" placeholder="نام" name="Name">
+                     <input type="text" class="email-bt" placeholder="نام" name="name">
                   </div>
                   <div class="form-group">
-                     <input type="text" class="email-bt" placeholder="ایمیل" name="Name">
+                     <input type="text" class="email-bt" placeholder="ایمیل" name="email">
                   </div>
                   <div class="form-group">
-                     <input type="text" class="email-bt" placeholder="شماره تلفن" name="Email">
-                  </div>
-                  <div class="form-group">
-                     <textarea class="massage-bt" placeholder="متن پیام" rows="5" id="comment" name="Massage"></textarea>
+                     <textarea class="massage-bt" placeholder="متن پیام" rows="5" id="comment" name="comment"></textarea>
                   </div>
                </form>
                <div class="send_btn"><a href="#">ارسال</a></div>
